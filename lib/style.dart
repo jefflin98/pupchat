@@ -14,6 +14,7 @@ class Style {
   static const Color greyText = Color(0xffbdbdbd);
   static const Color greyBorder = Color(0xffe7e7e7);
   static const Color greyBackgroud = Color(0xfff6f6f6);
+  static const Color greyOpac = Color(0xbbffffff);
 
   static const optionStyle = TextStyle(fontSize: 32, color: primary);
 
@@ -34,10 +35,22 @@ class Style {
     fontWeight: FontWeight.w500,
   );
 
-  static const TextStyle h2_black = TextStyle(
+  static const TextStyle h3 = TextStyle(
+    color: Style.greyText,
+    fontSize: 14,
+    fontFamily: "Inter",
+  );
+
+  static const TextStyle h2Black = TextStyle(
+    color: Colors.black,
+    fontSize: 16,
+    fontFamily: "Inter",
+    fontWeight: FontWeight.w500,
+  );
+
+  static const TextStyle h3Black = TextStyle(
     color: Colors.black,
     fontSize: 14,
     fontFamily: "Inter",
-    fontWeight: FontWeight.w500,
   );
 }
