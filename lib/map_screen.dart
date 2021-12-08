@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:pupchat/location_detail.dart';
 import 'package:pupchat/location_filter.dart';
 import 'package:pupchat/style.dart';
@@ -53,9 +54,20 @@ class _MyMapScreenState extends State<MapScreen> {
                         style: TextStyle(color: Style.greyText, fontSize: 15),
                       ),
                     ),
-                    Icon(
-                      Icons.filter_list_outlined,
-                      color: Style.primary,
+                    GestureDetector(
+                      onTap: () => {
+                        showModalBottomSheet(
+                          isScrollControlled: true,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20.0)),
+                          context: context,
+                          builder: (_) => LocationFilter(),
+                        ),
+                      },
+                      child: Icon(
+                        Icons.filter_list_outlined,
+                        color: Style.primary,
+                      ),
                     ),
                     GestureDetector(
                       onTap: () => {
@@ -128,7 +140,18 @@ class _MyMapScreenState extends State<MapScreen> {
                       Container(
                         height: 100,
                       ),
-                      Image.asset("assets/images/cafe.png"),
+                      Row(
+                        children: [
+                          Image.asset("assets/images/cafe.png"),
+                          Text(
+                            "  Doggo Bar",
+                            style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              color: Style.primary,
+                            ),
+                          ),
+                        ],
+                      ),
                       Container(
                         height: 50,
                       ),
@@ -140,6 +163,13 @@ class _MyMapScreenState extends State<MapScreen> {
                           Image.asset(tapped
                               ? "assets/images/cafeSelected.png"
                               : "assets/images/cafe.png"),
+                          Text(
+                            "  Puppy Cafe",
+                            style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              color: tapped ? Style.secondary : Style.primary,
+                            ),
+                          )
                         ],
                       ),
                       Container(
@@ -149,6 +179,13 @@ class _MyMapScreenState extends State<MapScreen> {
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           Image.asset("assets/images/park.png"),
+                          Text(
+                            "  Puppy Park",
+                            style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              color: Style.primary,
+                            ),
+                          ),
                           Container(
                             width: 30,
                           )

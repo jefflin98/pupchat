@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:pupchat/puppy_detail_screen.dart';
 import 'package:pupchat/puppy_filter.dart';
 import 'package:pupchat/style.dart';
 
@@ -50,9 +51,20 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Icon(
-                    Icons.filter_list_outlined,
-                    color: Style.primary,
+                  GestureDetector(
+                    onTap: () => {
+                      showModalBottomSheet(
+                        isScrollControlled: true,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20.0)),
+                        context: context,
+                        builder: (_) => PuppyFilter(),
+                      ),
+                    },
+                    child: Icon(
+                      Icons.filter_list_outlined,
+                      color: Style.primary,
+                    ),
                   ),
                   GestureDetector(
                     onTap: () => {
@@ -92,71 +104,72 @@ class HomeScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   GestureDetector(
-                    onTap: () {},
-                    child: Container(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                            padding: EdgeInsets.all(10),
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: AssetImage(
-                                  'assets/images/dog1.png',
-                                ),
-                                fit: BoxFit.fitWidth,
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => PuppyDetailScreen()));
+                    },
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          padding: EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage(
+                                'assets/images/dog1.png',
                               ),
+                              fit: BoxFit.fitWidth,
                             ),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              crossAxisAlignment: CrossAxisAlignment.end,
-                              children: [
-                                GestureDetector(
-                                  onTap: () {
-                                    onItemTapped(2);
-                                  },
-                                  child: Container(
-                                    width:
-                                        MediaQuery.of(context).size.width / 4,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(50),
-                                      color: Style.greyOpac, //(0xfff6f6f6),
-                                    ),
-                                    padding: const EdgeInsets.all(10),
-                                    child: Center(
-                                        child: Text(
-                                      "Contact",
-                                      style:
-                                          TextStyle(color: Style.primaryDark),
-                                    )),
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              GestureDetector(
+                                onTap: () {
+                                  onItemTapped(2);
+                                },
+                                child: Container(
+                                  width: MediaQuery.of(context).size.width / 4,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(50),
+                                    color: Style.greyOpac, //(0xfff6f6f6),
                                   ),
+                                  padding: const EdgeInsets.all(10),
+                                  child: Center(
+                                      child: Text(
+                                    "Contact",
+                                    style: TextStyle(color: Style.primaryDark),
+                                  )),
                                 ),
-                                Container(
-                                  height: 20,
-                                ),
-                              ],
-                            ),
-                            width: MediaQuery.of(context).size.width * 9 / 10,
-                            height: MediaQuery.of(context).size.height / 3,
+                              ),
+                              Container(
+                                height: 20,
+                              ),
+                            ],
                           ),
-                          Padding(
-                            padding: EdgeInsets.only(left: 10, top: 5),
-                            child: Text('Coco', style: Style.h2Black),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.only(left: 10, top: 5),
-                            child: Text(
-                                'Cute and energetic, love to play with other dogs',
-                                style: Style.h3Black),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.only(left: 10, top: 5),
-                            child: Text('Male | Poodle | 10 pounds',
-                                style: Style.h3),
-                          ),
-                        ],
-                      ),
+                          width: MediaQuery.of(context).size.width * 9 / 10,
+                          height: MediaQuery.of(context).size.height / 3,
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 10, top: 5),
+                          child: Text('Coco', style: Style.h2Black),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 10, top: 5),
+                          child: Text(
+                              'Cute and energetic, love to play with other dogs',
+                              style: Style.h3Black),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 10, top: 5),
+                          child: Text('Male | Poodle | 10 pounds',
+                              style: Style.h3),
+                        ),
+                      ],
                     ),
                   ),
                   Container(
