@@ -66,6 +66,11 @@ class _PuppyDetailScreenState extends State<PuppyDetailScreen> {
                       index += 1;
                     });
                   },
+                  onHorizontalDragEnd: (d) {
+                    setState(() {
+                      index += 1;
+                    });
+                  },
                   child: Image.asset(
                     index % 3 == 0
                         ? "assets/images/coco1.png"
