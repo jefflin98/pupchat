@@ -46,7 +46,7 @@ class HomeScreen extends StatelessWidget {
                     child: TextField(
                       decoration: InputDecoration(
                         border: InputBorder.none,
-                        hintText: "search",
+                        hintText: "Search",
                       ),
                     ),
                   ),

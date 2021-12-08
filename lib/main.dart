@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pupchat/chat_screen.dart';
 import 'package:pupchat/home_screen.dart';
+import 'package:pupchat/map_screen.dart';
 import 'package:pupchat/style.dart';
 
 void main() {
@@ -51,10 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // than having to individually change instances of widgets.
     List<Widget> _widgetOptions = <Widget>[
       HomeScreen(_onItemTapped),
-      const Text(
-        'Map',
-        style: Style.h1,
-      ),
+      const MapScreen(),
       const ChatScreen(),
       const Text(
         'Profile',

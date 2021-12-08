@@ -62,6 +62,11 @@ flutter:
       - assets/images/dog1.png
       - assets/images/dog2.png
       - assets/images/dogHead1.png
+      - assets/images/map.png
+      - assets/images/park.png
+      - assets/images/cafe.png
+      - assets/images/cafeSelected.png
+      - assets/images/stars.png
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

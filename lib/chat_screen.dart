@@ -15,9 +15,11 @@ class ChatScreen extends StatelessWidget {
           children: [
             Container(height: 15),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                  width: MediaQuery.of(context).size.width * 9 / 10,
+                  width: MediaQuery.of(context).size.width * 8.5 / 10,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(50),
                     border: Border.all(
@@ -33,7 +35,7 @@ class ChatScreen extends StatelessWidget {
                   child: const TextField(
                     decoration: InputDecoration(
                       border: InputBorder.none,
-                      hintText: "search",
+                      hintText: "Search",
                     ),
                   ),
                 ),
