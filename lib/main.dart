@@ -19,15 +19,15 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(index: 0),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  MyHomePage({Key? key, required this.index}) : super(key: key);
 
-  final String title;
+  int index;
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -44,16 +44,16 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
+    if (widget.index != -1) {
+      setState(() {
+        _selectedIndex = widget.index;
+      });
+      widget.index = -1;
+    }
     List<Widget> _widgetOptions = <Widget>[
       HomeScreen(_onItemTapped),
       const MapScreen(),
-      const ChatScreen(),
+      ChatScreen(0),
       const Text(
         'Profile',
         style: Style.h1,
@@ -61,6 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
     ];
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.

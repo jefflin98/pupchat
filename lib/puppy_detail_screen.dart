@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:pupchat/chat_detail_screen.dart';
 import 'package:pupchat/style.dart';
 
 class PuppyDetailScreen extends StatefulWidget {
@@ -124,7 +125,10 @@ class _PuppyDetailScreenState extends State<PuppyDetailScreen> {
                       ),
                       GestureDetector(
                         onTap: () => {
-                          Navigator.pop(context),
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ChatDetailScreen(0)))
                         },
                         child: Center(
                           child: Container(

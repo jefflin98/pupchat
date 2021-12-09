@@ -43,15 +43,20 @@ class _MyMapScreenState extends State<MapScreen> {
                         ),
                         color: Style.greyBackgroud, //(0xfff6f6f6),
                       ),
-                      padding: const EdgeInsets.only(
-                        left: 16,
-                        right: 16,
-                        top: 16,
-                        bottom: 16,
-                      ),
-                      child: Text(
-                        " Search",
-                        style: TextStyle(color: Style.greyText, fontSize: 15),
+                      // padding: const EdgeInsets.only(
+                      //   left: 16,
+                      //   right: 16,
+                      //   top: 16,
+                      //   bottom: 16,
+                      // ),
+                      child: const Padding(
+                        padding: EdgeInsets.only(left: 20),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: "Search",
+                          ),
+                        ),
                       ),
                     ),
                     GestureDetector(

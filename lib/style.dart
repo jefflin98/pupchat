@@ -17,6 +17,7 @@ class Style {
   static const Color greyBackgroud = Color(0xfff6f6f6);
   static const Color greyOpac = Color(0xbbffffff);
   static const Color darkGreyText = Color(0xff828282);
+  static const Color no = Color(0x00000000);
 
   static const optionStyle = TextStyle(fontSize: 32, color: primary);
 
@@ -37,6 +38,12 @@ class Style {
     fontWeight: FontWeight.w500,
   );
 
+  static const TextStyle h2White = TextStyle(
+    color: Style.white,
+    fontSize: 16,
+    fontFamily: "Inter",
+  );
+
   static const TextStyle h3 = TextStyle(
     color: Style.greyText,
     fontSize: 14,
@@ -45,6 +52,12 @@ class Style {
 
   static const TextStyle h3Grey = TextStyle(
     color: Style.darkGreyText,
+    fontSize: 14,
+    fontFamily: "Inter",
+  );
+
+  static const TextStyle h3White = TextStyle(
+    color: Style.white,
     fontSize: 14,
     fontFamily: "Inter",
   );

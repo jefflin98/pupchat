@@ -2,6 +2,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:pupchat/chat_detail_screen.dart';
 import 'package:pupchat/style.dart';
 
 class LocationDetail extends StatelessWidget {
@@ -112,7 +113,11 @@ class LocationDetail extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () => {
-                    Navigator.pop(context),
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ChatDetailScreen(1),
+                        )),
                   },
                   child: Center(
                     child: Container(

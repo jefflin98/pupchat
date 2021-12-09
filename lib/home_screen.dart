@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:pupchat/chat_detail_screen.dart';
 import 'package:pupchat/puppy_detail_screen.dart';
 import 'package:pupchat/puppy_filter.dart';
 import 'package:pupchat/style.dart';
@@ -130,7 +131,12 @@ class HomeScreen extends StatelessWidget {
                             children: [
                               GestureDetector(
                                 onTap: () {
-                                  onItemTapped(2);
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => ChatDetailScreen(0),
+                                    ),
+                                  );
                                 },
                                 child: Container(
                                   width: MediaQuery.of(context).size.width / 4,
