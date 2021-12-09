@@ -92,12 +92,7 @@ class ChatDetailScreen extends StatelessWidget {
                           ],
                         ),
                       )
-                    : Container(
-                        height: 10,
-                      ),
-                Container(
-                  height: 20,
-                ),
+                    : Container(),
                 Row(
                   children: [
                     const SizedBox(width: 20),
