@@ -1,3 +1,4 @@
+// ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -21,6 +22,20 @@ class Style {
   static const Color no = Color(0x00000000);
 
   static const optionStyle = TextStyle(fontSize: 32, color: primary);
+
+  static const Map<int, Color> colorPrimary = {
+    50: Color(0x8058D1CA),
+    100: Color(0x9958D1CA),
+    200: Color(0xB358D1CA),
+    300: Color(0xCC58D1CA),
+    400: Color(0xE658D1CA),
+    500: primary,
+    600: primary,
+    700: primary,
+    800: primary,
+    900: primary,
+  };
+  MaterialColor materialPrimary = MaterialColor(0xFF880E4F, colorPrimary);
 
   static const TextStyle h1 = TextStyle(
     // h4 -> display1
