@@ -35,7 +35,8 @@ class Style {
     800: primary,
     900: primary,
   };
-  MaterialColor materialPrimary = MaterialColor(0xFF880E4F, colorPrimary);
+  static const MaterialColor materialPrimary =
+      MaterialColor(0xFF880E4F, colorPrimary);
 
   static const TextStyle h1 = TextStyle(
     // h4 -> display1
