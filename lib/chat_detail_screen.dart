@@ -164,7 +164,7 @@ class ChatDetailScreen extends StatelessWidget {
                             image: AssetImage(
                               'assets/images/m_left.png',
                             ),
-                            fit: BoxFit.cover,
+                            fit: BoxFit.fill,
                             alignment: Alignment.topCenter),
                       ),
                       child: Padding(
