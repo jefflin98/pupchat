@@ -57,10 +57,7 @@ class PuppyFilter extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: const [
-                Text(
-                  'Any',
-                  style: Style.h3Black,
-                ),
+                Text('Any', style: Style.h3PrimaryBold),
                 Text('0-1', style: Style.h3Black),
                 Text('2-3', style: Style.h3Black),
                 Text('4-5', style: Style.h3Black),
@@ -75,7 +72,7 @@ class PuppyFilter extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: const [
-                Text('Any', style: Style.h3Black),
+                Text('Any', style: Style.h3PrimaryBold),
                 Text('0-5', style: Style.h3Black),
                 Text('6-10', style: Style.h3Black),
                 Text('11-15', style: Style.h3Black),
@@ -90,7 +87,7 @@ class PuppyFilter extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: const [
-                Text('Any', style: Style.h3Black),
+                Text('Any', style: Style.h3PrimaryBold),
                 Text('Male', style: Style.h3Black),
                 Text('Female', style: Style.h3Black),
               ],
@@ -102,7 +99,7 @@ class PuppyFilter extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: const [
-                Text('Any', style: Style.h3Black),
+                Text('Any', style: Style.h3PrimaryBold),
                 Text('Fully Vaccinated', style: Style.h3Black),
               ],
             ),
@@ -113,7 +110,7 @@ class PuppyFilter extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: const [
-                Text('Any', style: Style.h3Black),
+                Text('Any', style: Style.h3PrimaryBold),
                 Text('Spayed/Neutured', style: Style.h3Black),
               ],
             ),
@@ -124,7 +121,7 @@ class PuppyFilter extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: const [
-                Text('0.5', style: Style.h3Black),
+                Text('0.5', style: Style.h3PrimaryBold),
                 Text('1', style: Style.h3Black),
                 Text('2', style: Style.h3Black),
                 Text('3+', style: Style.h3Black),

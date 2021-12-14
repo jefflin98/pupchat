@@ -1,3 +1,4 @@
+// ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
 import 'package:pupchat/home_screen.dart';
 import 'package:pupchat/main.dart';
@@ -96,57 +97,192 @@ class ChatDetailScreen extends StatelessWidget {
                 Row(
                   children: [
                     const SizedBox(width: 20),
-                    Image.asset("assets/images/m1.png"),
+                    // Image.asset("assets/images/m1.png"),
+                    Container(
+                      // color: Colors.red,
+                      width: MediaQuery.of(context).size.width / 2,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage(
+                              'assets/images/m_left.png',
+                            ),
+                            fit: BoxFit.cover,
+                            alignment: Alignment.topCenter),
+                      ),
+                      child: Padding(
+                        padding: EdgeInsets.all(15),
+                        child: const Text(
+                          "Hi! Nice to meet you! \nYour dog is so cute!",
+                          style: Style.h3Black,
+                        ),
+                      ),
+                    ),
                     const Spacer()
                   ],
+                ),
+                Container(
+                  height: 10,
                 ),
                 Row(
                   children: [
                     const Spacer(),
-                    Image.asset("assets/images/m2.png"),
+                    Container(
+                      // color: Colors.red,
+                      width: MediaQuery.of(context).size.width * 2 / 3,
+                      height: 100,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage(
+                              'assets/images/m_right.png',
+                            ),
+                            fit: BoxFit.cover,
+                            alignment: Alignment.topCenter),
+                      ),
+                      child: Padding(
+                        padding: EdgeInsets.all(15),
+                        child: const Text(
+                          "Coco is very cute too! We seems to live very close to each other. \nDo you want to meet sometime?",
+                          style: Style.h3White,
+                        ),
+                      ),
+                    ),
                     const SizedBox(width: 20),
                   ],
+                ),
+                Container(
+                  height: 5,
                 ),
                 Row(
                   children: [
                     const SizedBox(width: 20),
-                    Image.asset("assets/images/m3.png"),
+                    Container(
+                      // color: Colors.red,
+                      width: MediaQuery.of(context).size.width * 2 / 3,
+                      height: 100,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage(
+                              'assets/images/m_left.png',
+                            ),
+                            fit: BoxFit.cover,
+                            alignment: Alignment.topCenter),
+                      ),
+                      child: Padding(
+                        padding: EdgeInsets.all(15),
+                        child: const Text(
+                          "Sure! But I don't know a lot of dog-friendly places nearby. Do you know any places?",
+                          style: Style.h3Black,
+                        ),
+                      ),
+                    ),
                     const Spacer()
                   ],
+                ),
+                Container(
+                  height: 10,
                 ),
                 status >= 1
                     ? Row(
                         children: [
                           const Spacer(),
-                          GestureDetector(
-                            onTap: () {
-                              showModalBottomSheet(
-                                isScrollControlled: true,
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(20.0)),
-                                context: context,
-                                builder: (_) => Container(
-                                  color: Style.no,
-                                  height:
-                                      MediaQuery.of(context).size.height / 3,
-                                  width: MediaQuery.of(context).size.width,
-                                  child: GestureDetector(
-                                    onTap: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) =>
-                                              ChatDetailScreen(2),
-                                        ),
-                                      );
-                                    },
-                                    child: Image.asset("assets/images/time.png",
-                                        fit: BoxFit.fitWidth),
+                          Container(
+                            // color: Colors.red,
+                            width: MediaQuery.of(context).size.width * 2 / 3,
+                            height: 150,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage(
+                                    'assets/images/m_right.png',
                                   ),
-                                ),
-                              );
-                            },
-                            child: Image.asset("assets/images/m4.png"),
+                                  fit: BoxFit.fill,
+                                  alignment: Alignment.topCenter),
+                            ),
+                            child: Padding(
+                              padding: EdgeInsets.all(15),
+                              child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "Check this place!",
+                                    style: Style.h3White,
+                                  ),
+                                  Text(
+                                    "Puppy Cafe",
+                                    style: Style.h3WhiteBold,
+                                  ),
+                                  Image.asset("assets/images/rating.png"),
+                                  Container(
+                                    height: 1,
+                                    color: Colors.white,
+                                  ),
+                                  Center(
+                                    child: GestureDetector(
+                                      onTap: () {
+                                        showModalBottomSheet(
+                                          isScrollControlled: true,
+                                          shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(20.0)),
+                                          context: context,
+                                          builder: (_) => Container(
+                                            color: Style.no,
+                                            height: MediaQuery.of(context)
+                                                    .size
+                                                    .height /
+                                                3,
+                                            width: MediaQuery.of(context)
+                                                .size
+                                                .width,
+                                            child: Column(
+                                              children: [
+                                                Spacer(),
+                                                Image.asset(
+                                                    "assets/images/time.png",
+                                                    fit: BoxFit.fitWidth),
+                                                GestureDetector(
+                                                    onTap: () {
+                                                      Navigator.push(
+                                                        context,
+                                                        MaterialPageRoute(
+                                                          builder: (context) =>
+                                                              ChatDetailScreen(
+                                                                  2),
+                                                        ),
+                                                      );
+                                                    },
+                                                    child: Container(
+                                                      height: 60,
+                                                      width:
+                                                          MediaQuery.of(context)
+                                                              .size
+                                                              .width,
+                                                      child: Center(
+                                                        child: Text(
+                                                          "Confirm Time",
+                                                          style: Style.h1White,
+                                                        ),
+                                                      ),
+                                                      color: Style.primary,
+                                                    )),
+                                              ],
+                                            ),
+                                          ),
+                                        );
+                                      },
+                                      child: Text(
+                                        "Make appointment",
+                                        style: Style.h2White,
+                                      ),
+                                    ),
+                                  ),
+                                  Container(
+                                    height: 10,
+                                  ),
+                                ],
+                              ),
+                            ),
                           ),
                           const SizedBox(width: 20),
                         ],

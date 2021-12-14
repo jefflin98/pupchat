@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pupchat/chat_screen.dart';
 import 'package:pupchat/home_screen.dart';
 import 'package:pupchat/map_screen.dart';
+import 'package:pupchat/profile_screen.dart';
 import 'package:pupchat/style.dart';
 
 void main() {
@@ -54,10 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
       HomeScreen(_onItemTapped),
       const MapScreen(),
       ChatScreen(0),
-      const Text(
-        'Profile',
-        style: Style.h1,
-      ),
+      const ProfileScreen(),
     ];
 
     return Scaffold(

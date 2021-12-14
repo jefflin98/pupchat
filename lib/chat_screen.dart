@@ -1,3 +1,4 @@
+// ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
 import 'package:pupchat/chat_detail_screen.dart';
 import 'package:pupchat/style.dart';
@@ -94,13 +95,38 @@ class ChatScreen extends StatelessWidget {
               ),
               padding: const EdgeInsets.symmetric(horizontal: 20)),
           const Spacer(),
-          SizedBox(
-            width: MediaQuery.of(context).size.width,
-            child: Image.asset(
-              "assets/images/referral.png",
-              fit: BoxFit.fitWidth,
-            ),
-          ),
+          Container(
+              width: MediaQuery.of(context).size.width,
+              height: 150,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(
+                    "assets/images/referral.png",
+                  ),
+                  fit: BoxFit.fitWidth,
+                  alignment: Alignment.bottomCenter,
+                ),
+              ),
+              child: Column(
+                children: [
+                  Spacer(),
+                  Row(
+                    children: [
+                      Spacer(),
+                      Text(
+                        "Invite your friends to \nget a referral coupon!",
+                        style: Style.h1White,
+                      ),
+                      Container(
+                        width: 50,
+                      )
+                    ],
+                  ),
+                  Container(
+                    height: 30,
+                  )
+                ],
+              ))
         ],
       ),
     );

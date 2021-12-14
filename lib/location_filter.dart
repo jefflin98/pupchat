@@ -57,10 +57,7 @@ class LocationFilter extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: const [
-                Text(
-                  'Any',
-                  style: Style.h3Black,
-                ),
+                Text('Any', style: Style.h3PrimaryBold),
                 Text('Restaurant', style: Style.h3Black),
                 Text('Cafe', style: Style.h3Black),
                 Text('Park', style: Style.h3Black),
@@ -73,7 +70,7 @@ class LocationFilter extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: const [
-                Text('Any', style: Style.h3Black),
+                Text('Any', style: Style.h3PrimaryBold),
                 Text('Allowed', style: Style.h3Black),
                 Text('Not allowed', style: Style.h3Black),
               ],
@@ -85,7 +82,7 @@ class LocationFilter extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: const [
-                Text('0.5', style: Style.h3Black),
+                Text('0.5', style: Style.h3PrimaryBold),
                 Text('1', style: Style.h3Black),
                 Text('2', style: Style.h3Black),
                 Text('3+', style: Style.h3Black),

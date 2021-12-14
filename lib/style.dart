@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class Style {
   Style._();
@@ -29,6 +30,20 @@ class Style {
     letterSpacing: 0.4,
     height: 0.9,
     color: primary,
+  );
+
+  static const TextStyle h1Black = TextStyle(
+    color: Colors.black,
+    fontSize: 20,
+    fontFamily: "Inter",
+    fontWeight: FontWeight.w500,
+  );
+
+  static const TextStyle h1White = TextStyle(
+    color: Colors.white,
+    fontSize: 20,
+    fontFamily: "Inter",
+    fontWeight: FontWeight.w500,
   );
 
   static const TextStyle h2 = TextStyle(
@@ -62,6 +77,13 @@ class Style {
     fontFamily: "Inter",
   );
 
+  static const TextStyle h3WhiteBold = TextStyle(
+    color: Style.white,
+    fontSize: 14,
+    fontFamily: "Inter",
+    fontWeight: FontWeight.w500,
+  );
+
   static const TextStyle h2Black = TextStyle(
     color: Colors.black,
     fontSize: 16,
@@ -73,5 +95,12 @@ class Style {
     color: Colors.black,
     fontSize: 14,
     fontFamily: "Inter",
+  );
+
+  static const TextStyle h3PrimaryBold = TextStyle(
+    color: primary,
+    fontSize: 14,
+    fontFamily: "Inter",
+    fontWeight: FontWeight.w500,
   );
 }
