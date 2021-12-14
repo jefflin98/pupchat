@@ -200,7 +200,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     children: [
                       tapped
                           ? Image.asset("assets/images/coupon.png")
-                          : Container(),
+                          : Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Image.asset("assets/images/no_coupon.png"),
+                                Text(
+                                    "Schedule your first meeting\nwith other puppy owners to\nget coupon!",
+                                    style: Style.h2)
+                              ],
+                            ),
                     ],
                   ),
                 ],
