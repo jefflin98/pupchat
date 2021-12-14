@@ -228,44 +228,50 @@ class ChatDetailScreen extends StatelessWidget {
                                           context: context,
                                           builder: (_) => Container(
                                             color: Style.no,
-                                            height: MediaQuery.of(context)
-                                                    .size
-                                                    .height /
-                                                3,
+                                            height: 310,
                                             width: MediaQuery.of(context)
                                                 .size
                                                 .width,
                                             child: Column(
                                               children: [
-                                                Spacer(),
+                                                Container(
+                                                  height: 20,
+                                                ),
                                                 Image.asset(
                                                     "assets/images/time.png",
                                                     fit: BoxFit.fitWidth),
                                                 GestureDetector(
-                                                    onTap: () {
-                                                      Navigator.push(
-                                                        context,
-                                                        MaterialPageRoute(
-                                                          builder: (context) =>
-                                                              ChatDetailScreen(
-                                                                  2),
-                                                        ),
-                                                      );
-                                                    },
-                                                    child: Container(
-                                                      height: 60,
-                                                      width:
-                                                          MediaQuery.of(context)
-                                                              .size
-                                                              .width,
-                                                      child: Center(
-                                                        child: Text(
-                                                          "Confirm Time",
-                                                          style: Style.h1White,
-                                                        ),
+                                                  onTap: () {
+                                                    Navigator.push(
+                                                      context,
+                                                      MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            ChatDetailScreen(2),
                                                       ),
-                                                      color: Style.primary,
-                                                    )),
+                                                    );
+                                                  },
+                                                  child: Center(
+                                                    child: Container(
+                                                      decoration: BoxDecoration(
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(50),
+                                                        color: Style
+                                                            .primary, //(0xfff6f6f6),
+                                                      ),
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                        left: 20,
+                                                        right: 20,
+                                                        top: 10,
+                                                        bottom: 10,
+                                                      ),
+                                                      child: const Text(
+                                                          'Confirm Time',
+                                                          style: Style.h1White),
+                                                    ),
+                                                  ),
+                                                ),
                                               ],
                                             ),
                                           ),
